@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Металлопрокат на объект от 10 тонн — крупный опт и комплексные поставки</title>
+  <meta name="description" content="Комплексные поставки металлопроката на строительные и промышленные объекты. Расчёт спецификаций, резка, обработка, поставка партиями, доставка 24/7 и персональный менеджер." />
+  <link rel="preconnect" href="https://metallobazav.ru" />
+  <link rel="stylesheet" href="https://metallobazav.ru/local/verstka_new/styles/fonts.css?17293227749620" />
+  <style>
+    :root{
+      --accent:#FDBC00;
+      --accent-dark:#dba600;
+      --bg:#0d0f12;
+      --bg-2:#15181d;
+      --card:#1a1e24;
+      --line:#2a3038;
+      --text:#f5f6f7;
+      --muted:#b5bbc4;
+      --white:#ffffff;
+      --black:#090a0c;
+      --success:#dff7c9;
+      --radius:22px;
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, Arial, Helvetica, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input,select,textarea{font:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:90px 0;
+    }
+
+    .section--soft{
+      background:linear-gradient(180deg,#111419 0%,#0f1115 100%);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--accent);
+      font-size:14px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:34px;
+      height:3px;
+      border-radius:3px;
+      background:var(--accent);
+    }
+
+    h1,h2,h3{
+      margin:0;
+      line-height:1.08;
+    }
+
+    h1{
+      font-size:clamp(44px,7vw,82px);
+      max-width:920px;
+      letter-spacing:-.035em;
+    }
+
+    h2{
+      font-size:clamp(34px,5vw,58px);
+      letter-spacing:-.025em;
+    }
+
+    h3{
+      font-size:24px;
+    }
+
+    .lead{
+      margin:24px 0 0;
+      max-width:850px;
+      font-size:clamp(19px,2vw,25px);
+      color:#d9dde3;
+    }
+
+    .text-muted{color:var(--muted)}
+
+    .accent{
+      color:var(--accent);
+    }
+
+    .highlight{
+      display:inline;
+      background:var(--accent);
+      color:#111;
+      padding:.03em .16em .07em;
+      box-decoration-break:clone;
+      -webkit-box-decoration-break:clone;
+    }
+
+    .btn-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:34px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      min-height:56px;
+      padding:0 24px;
+      border-radius:14px;
+      border:1px solid transparent;
+      font-weight:800;
+      transition:.2s ease;
+      cursor:pointer;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+    .btn--primary{
+      background:var(--accent);
+      color:#101114;
+      box-shadow:0 12px 28px rgba(253,188,0,.18);
+    }
+
+    .btn--primary:hover{background:#ffd13b}
+    .btn--ghost{
+      border-color:#3a4049;
+      background:#15181d;
+      color:var(--white);
+    }
+
+    .hero{
+      position:relative;
+      min-height:760px;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 78% 30%, rgba(253,188,0,.14), transparent 28%),
+        linear-gradient(110deg, rgba(7,8,10,.98) 0%, rgba(12,14,17,.92) 45%, rgba(12,14,17,.56) 68%, rgba(12,14,17,.9) 100%);
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(90deg, transparent 0 70%, rgba(253,188,0,.05) 70% 100%),
+        repeating-linear-gradient(90deg, transparent 0 120px, rgba(255,255,255,.018) 120px 121px);
+    }
+
+    .hero__inner{
+      position:relative;
+      z-index:2;
+      padding:90px 0 70px;
+    }
+
+    .hero__badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:28px;
+    }
+
+    .chip{
+      padding:11px 15px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.11);
+      border-radius:12px;
+      color:#e9ebee;
+      font-weight:700;
+      backdrop-filter:blur(6px);
+    }
+
+    .hero__facts{
+      margin-top:46px;
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      max-width:900px;
+      gap:1px;
+      background:#2a2f36;
+      border:1px solid #2a2f36;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .fact{
+      background:#15181d;
+      padding:22px 24px;
+    }
+
+    .fact strong{
+      display:block;
+      color:var(--accent);
+      font-size:20px;
+      margin-bottom:6px;
+    }
+
+    .fact span{
+      color:#c8cdd4;
+      font-size:15px;
+    }
+
+    .trustbar{
+      border-top:1px solid #242930;
+      border-bottom:1px solid #242930;
+      background:#111419;
+    }
+
+    .trustbar__grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1px;
+      background:#242930;
+    }
+
+    .trust{
+      background:#111419;
+      padding:24px;
+    }
+
+    .trust b{
+      color:var(--accent);
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:48px;
+      align-items:start;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:36px;
+    }
+
+    .card{
+      background:linear-gradient(180deg,#1a1e24,#15181d);
+      border:1px solid #2a3038;
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:0 16px 35px rgba(0,0,0,.14);
+    }
+
+    .card__icon{
+      width:46px;
+      height:46px;
+      border-radius:12px;
+      background:rgba(253,188,0,.13);
+      color:var(--accent);
+      display:grid;
+      place-items:center;
+      font-weight:900;
+      margin-bottom:18px;
+      border:1px solid rgba(253,188,0,.26);
+    }
+
+    .card p{
+      color:var(--muted);
+      margin:12px 0 0;
+    }
+
+    .spec-box{
+      margin-top:28px;
+      background:#111419;
+      border:1px solid #2b3038;
+      border-radius:var(--radius);
+      padding:26px;
+    }
+
+    .spec-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px 24px;
+      margin:22px 0 0;
+      padding:0;
+      list-style:none;
+    }
+
+    .spec-list li{
+      position:relative;
+      padding-left:24px;
+      color:#d8dce2;
+    }
+
+    .spec-list li::before{
+      content:"✓";
+      position:absolute;
+      left:0;
+      color:var(--accent);
+      font-weight:900;
+    }
+
+    .process{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:36px;
+    }
+
+    .step{
+      background:#15181d;
+      border:1px solid #2b3038;
+      border-radius:18px;
+      padding:24px;
+    }
+
+    .step__num{
+      font-size:13px;
+      font-weight:900;
+      letter-spacing:.08em;
+      color:#0c0d0f;
+      background:var(--accent);
+      display:inline-block;
+      border-radius:999px;
+      padding:6px 10px;
+      margin-bottom:16px;
+    }
+
+    .step p{
+      color:var(--muted);
+      margin:10px 0 0;
+    }
+
+    .offer{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      margin-top:36px;
+    }
+
+    .offer__card{
+      border-radius:24px;
+      padding:32px;
+      border:1px solid #2d333b;
+      background:
+        linear-gradient(145deg,rgba(253,188,0,.08),transparent 45%),
+        #15181d;
+    }
+
+    .offer__card ul{
+      margin:20px 0 0;
+      padding-left:20px;
+      color:#d7dbe0;
+    }
+
+    .offer__card li+li{margin-top:8px}
+
+    .scenario{
+      margin-top:34px;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid #2b3038;
+      background:#14171b;
+    }
+
+    .scenario__top{
+      padding:28px 30px;
+      background:linear-gradient(90deg,rgba(253,188,0,.16),rgba(253,188,0,.03));
+      border-bottom:1px solid #2b3038;
+    }
+
+    .scenario__grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+    }
+
+    .scenario__item{
+      padding:24px;
+      border-right:1px solid #2b3038;
+    }
+
+    .scenario__item:last-child{border-right:none}
+    .scenario__item b{
+      display:block;
+      color:var(--accent);
+      font-size:24px;
+      margin-bottom:4px;
+    }
+
+    .cta-band{
+      background:var(--accent);
+      color:#111;
+      padding:52px 0;
+    }
+
+    .cta-band__inner{
+      display:flex;
+      gap:30px;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .cta-band h2{
+      max-width:760px;
+      font-size:32px;
+    }
+
+    .btn--dark{
+      background:#111;
+      color:#fff;
+      border-color:#111;
+      white-space:nowrap;
+    }
+
+    .form-wrap{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:42px;
+      align-items:start;
+    }
+
+    .form-card{
+      background:#15181d;
+      border:1px solid #2d333b;
+      border-radius:26px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+    }
+
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+
+    .field--full{
+      grid-column:1/-1;
+    }
+
+    label{
+      color:#dce0e5;
+      font-size:14px;
+      font-weight:700;
+    }
+
+    input, select, textarea{
+      width:100%;
+      border:1px solid #343a43;
+      background:#0f1114;
+      color:#fff;
+      border-radius:12px;
+      padding:14px 15px;
+      outline:none;
+    }
+
+    input:focus,select:focus,textarea:focus{
+      border-color:var(--accent);
+      box-shadow:0 0 0 3px rgba(253,188,0,.10);
+    }
+
+    textarea{min-height:110px;resize:vertical}
+
+    .filebox{
+      border:1px dashed #505863;
+      border-radius:14px;
+      padding:16px;
+      color:#bcc2ca;
+      background:#101216;
+    }
+
+    .form-note{
+      margin:14px 0 0;
+      color:#8f969f;
+      font-size:13px;
+    }
+
+    .form-submit{
+      width:100%;
+      margin-top:18px;
+      min-height:58px;
+      border:none;
+      border-radius:14px;
+      background:var(--accent);
+      color:#111;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .side-list{
+      margin-top:28px;
+      display:grid;
+      gap:14px;
+    }
+
+    .side-item{
+      padding:18px 20px;
+      border:1px solid #2b3038;
+      border-radius:16px;
+      background:#13161a;
+    }
+
+    .side-item b{
+      color:var(--accent);
+    }
+
+    .faq{
+      display:grid;
+      gap:12px;
+      margin-top:34px;
+    }
+
+    details{
+      border:1px solid #2b3038;
+      background:#13161a;
+      border-radius:15px;
+      padding:18px 20px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:800;
+    }
+
+    details p{
+      color:var(--muted);
+      margin:12px 0 0;
+    }
+
+    footer{
+      border-top:1px solid #242930;
+      padding:34px 0;
+      color:#8e959e;
+      background:#0b0d10;
+    }
+
+    .footer__inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 980px){
+      .grid-2,
+      .form-wrap,
+      .offer{
+        grid-template-columns:1fr;
+      }
+
+      .cards{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .process{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .hero__facts,
+      .trustbar__grid,
+      .scenario__grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .cta-band__inner{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{width:min(100% - 24px, var(--max))}
+      .section{padding:64px 0}
+      .hero{min-height:auto}
+      .hero__inner{padding:72px 0 52px}
+      h1{font-size:46px}
+      .lead{font-size:19px}
+
+      .hero__facts,
+      .trustbar__grid,
+      .cards,
+      .process,
+      .scenario__grid,
+      .form-grid,
+      .spec-list{
+        grid-template-columns:1fr;
+      }
+
+      .scenario__item{
+        border-right:none;
+        border-bottom:1px solid #2b3038;
+      }
+
+      .scenario__item:last-child{border-bottom:none}
+      .btn{width:100%}
+      .cta-band .btn{width:auto}
+    }
+  </style>
+  <style>
+    /* Адаптация страницы под визуальную систему metallobazav.ru */
+    :root{--accent:#fdbc00;--accent-dark:#e2a900;--ink:#151616;--soft:#f7f8fa;--line:#dee5ed;--muted:#6c737b;--max:1200px}
+    body{font-family:Gilroy,Arial,sans-serif;background:#fff;color:var(--ink);line-height:1.45}
+    .container{width:min(var(--max),calc(100% - 40px));max-width:var(--max)}
+    .site-header{background:#fff;color:var(--ink);position:relative;z-index:10;border-bottom:1px solid var(--line)}
+    .site-header__top{min-height:54px;border-bottom:1px solid var(--line);display:flex;align-items:stretch;gap:30px}
+    .site-header__contact{display:flex;align-items:center;gap:9px;font-size:15px;white-space:nowrap}
+    .site-header__contact img{width:17px;height:17px}
+    .site-header__search{height:33px;min-width:230px;max-width:310px;flex:1;margin:auto 0;border:1px solid var(--line);border-radius:4px;padding:0 12px;color:var(--muted)}
+    .site-header__socials{display:flex;gap:12px;align-items:center;margin-left:auto}.site-header__socials img{width:17px;height:17px}
+    .site-header__callback{min-width:175px;padding:0 16px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:16px}
+    .site-nav{display:flex;align-items:center;gap:28px;min-height:79px}.site-logo{width:175px;flex:none}.site-logo img{width:100%;height:auto}
+    .catalog-button,.nav-request{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(90deg,#ffe259,#ffa751);border:0;border-radius:5px;padding:11px 16px;font-weight:700;text-transform:uppercase;font-size:15px;cursor:pointer}
+    .catalog-button::before{content:'☰';font-size:18px;line-height:1}.site-nav__links{display:flex;gap:23px;align-items:center;flex:1;justify-content:space-between;font-size:16px;font-weight:500}.site-nav__links a:hover{color:var(--accent-dark)}.nav-request{text-transform:none;background:var(--accent);white-space:nowrap}
+    .hero{min-height:680px;background:linear-gradient(90deg,rgba(15,18,21,.92) 0%,rgba(16,18,20,.78) 46%,rgba(16,18,20,.24) 100%),url('https://metallobazav.ru/upload/dev2fun.imagecompress/webp/local/verstka_new/images/base/background3.webp') center/cover;color:#fff;display:flex;align-items:center}.hero::after{display:none}.hero__inner{padding:86px 0 78px}.eyebrow{color:var(--accent);font-weight:700}.eyebrow::before{background:var(--accent)}h1{font-family:Inter,Gilroy,Arial,sans-serif;font-size:65px;font-weight:600;text-transform:uppercase;max-width:990px;letter-spacing:-.02em}.highlight{background:var(--accent);color:#151616;padding:.02em .11em}.lead{font-size:20px;color:#fff;max-width:840px}.btn{border-radius:5px;min-height:49px;font-size:16px}.btn--primary{background:var(--accent);box-shadow:none}.btn--primary:hover{background:#ffd13b}.btn--ghost{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.7)}.chip{border-radius:4px;background:rgba(255,255,255,.13);border-color:rgba(255,255,255,.24)}
+    .hero__facts{max-width:100%;border:0;border-radius:0;box-shadow:none;background:rgba(255,255,255,.22)}.fact{background:rgba(15,17,20,.67);padding:20px 24px}.fact strong{color:var(--accent)}.fact span{color:#fff}.trustbar{background:#fff;border-color:var(--line)}.trustbar__grid{background:var(--line)}.trust{background:#fff;padding:25px 22px;color:#484e55}.trust b{color:#17191b;font-size:17px}.section{padding:75px 0}.section--soft{background:var(--soft)}h2{font-family:Inter,Gilroy,Arial,sans-serif;font-weight:600;font-size:clamp(33px,4vw,51px);color:#151616}.lead:not(.hero .lead){color:#515862}.accent{color:#d99d00}.card,.spec-box,.step,.offer__card,.scenario,.side-item,details,.form-card{background:#fff;border-color:var(--line);border-radius:6px;box-shadow:none}.card{padding:28px}.card__icon{background:#fff5d8;border-color:#f5d87d;color:#a67800;border-radius:4px}.card p,.step p,details p{color:#626a73}.spec-box{padding:28px}.spec-list li{color:#424952}.spec-list li::before{color:#d99d00}.cards{gap:15px}.process{gap:15px}.step{padding:24px}.step__num{border-radius:4px;background:var(--accent)}.offer__card{background:#fff}.scenario{background:#fff}.scenario__top{background:#fff8e1;border-color:#eadfb9}.scenario__item{border-color:var(--line)}.scenario__item b{color:#bd8800}.cta-band{background:var(--accent)}.btn--dark{border-radius:5px}.form-card{padding:30px}input,select,textarea{background:#fff;color:#151616;border-color:#cfd6de;border-radius:4px}.filebox{background:#fafbfc;border-radius:4px;border-color:#aab2bc}.form-submit{border-radius:5px;background:var(--accent);color:#151616}.form-note{color:#7a828b}.side-item{padding:18px 20px}.side-item b{color:#a67600}.faq{gap:10px}details{padding:19px 21px}summary{font-size:17px}.site-footer{background:#151616;color:#fff;padding:46px 0 28px}.site-footer__grid{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:28px}.site-footer__logo{max-width:186px;margin-bottom:18px}.site-footer h3{font-size:18px;margin-bottom:13px}.site-footer a,.site-footer p{display:block;color:#d3d6d8;margin:8px 0;font-size:15px}.site-footer a:hover{color:var(--accent)}.site-footer__bottom{border-top:1px solid #3f4448;margin-top:28px;padding-top:20px;color:#92989d;font-size:13px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .offer__card h3{color:#151616;font-size:25px;font-weight:700}.offer__card ul{color:#2f363d;font-size:17px;font-weight:600;line-height:1.55}.offer__card li::marker{color:#bd8800}.offer__card li+li{margin-top:10px}
+    .lead--usp{max-width:none}.spec-box--usp{margin-top:30px;padding:34px}.spec-box--usp h3{font-size:27px}.spec-box--usp .spec-list{grid-template-columns:repeat(3,1fr);gap:18px 30px}.spec-box--usp .spec-list li{font-size:17px;font-weight:600}.usp-quote{position:relative;display:flex;gap:20px;width:100%;margin:36px 0 0;padding:9px 0 9px 29px;border-left:5px solid var(--accent);color:#252b31}.usp-quote__mark{font-family:Georgia,serif;font-size:72px;line-height:.78;color:var(--accent);flex:none}.usp-quote h3{font-size:27px;color:#151616}.usp-quote p{max-width:none;margin:10px 0 0;font-size:18px;line-height:1.5;color:#424952}.usp-quote p+p{color:#626a73}.process .step:first-child p{margin-top:40px}.cta-band{background:transparent;padding:36px 0}.cta-band__inner{min-height:185px;box-sizing:border-box;background:var(--accent);padding:44px 48px}.hero{min-height:680px;display:flex;background:linear-gradient(90deg,rgba(15,18,21,.92) 0%,rgba(16,18,20,.78) 46%,rgba(16,18,20,.24) 100%),url('https://metallobazav.ru/upload/dev2fun.imagecompress/webp/local/verstka_new/images/base/background3.webp') center/cover;padding:0;overflow:hidden}.hero__inner{width:calc(100% - 80px);max-width:none;min-height:0;padding:86px 0 78px;background:none;border-radius:0;text-align:center}.hero h1{max-width:none}.hero h1 .highlight{display:block;width:max-content;margin:10px 0 0}.hero .lead{margin-left:0;margin-right:0;font-size:30px;text-align:left;text-transform:uppercase}.hero .btn-row{justify-content:flex-start;text-align:left}
+    .form-wrap--request{margin-top:36px}.specification-showcase,.construction-schedule-showcase,.single-supplier-showcase,.workflow-showcase,.calculation-form-showcase{margin:0;background:#f7f8fa}.specification-showcase img,.construction-schedule-showcase img,.single-supplier-showcase img,.workflow-showcase img,.calculation-form-showcase>img{display:block;width:100%;height:auto}.calculation-form-showcase{position:relative;overflow:hidden}.calculation-form{position:absolute;top:20.7%;left:50.7%;width:37.45%;height:69.8%;box-sizing:border-box;padding:2.05% 2.25%;display:flex;flex-direction:column;background:#fff;border-radius:10px;box-shadow:0 8px 26px rgba(29,46,62,.08)}.calculation-form__grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px}.calculation-form__field{display:flex;flex-direction:column;gap:8px}.calculation-form__field--full{grid-column:1/-1}.calculation-form label{color:#7c8fa8;font-size:16px;font-weight:700}.calculation-form input{width:100%;height:57px;box-sizing:border-box;padding:0 15px;border:1px solid #dbe4ef;border-radius:6px;background:#fff;color:#15243a;font:inherit;font-size:16px}.calculation-form input::placeholder{color:#96a8bf}.calculation-form__file{position:relative;display:flex;align-items:center;gap:14px;height:82px;box-sizing:border-box;padding:12px 18px;border:1px dashed #9db5d1;border-radius:5px;color:#9aacbf;font-size:15px}.calculation-form__file input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}.calculation-form__file span{display:flex;align-items:center;gap:12px;padding:12px 16px;border-radius:5px;background:#edf3f9;color:#15243a;font-weight:700}.calculation-form__file span::before{content:'⌕';font-size:24px;line-height:12px;transform:rotate(-35deg)}.calculation-form__file em{font-style:normal}.calculation-form__submit{margin-top:21px;min-height:66px;border:0;border-radius:6px;background:#ffc400;color:#101b2d;font:700 18px/1 Inter,Gilroy,Arial,sans-serif;cursor:pointer}.calculation-form__submit:hover{background:#ffd13b}.calculation-form__note{margin:15px 0 0;color:#8092a9;font-size:14px;line-height:1.4}.calculation-form__note span{display:block}@media(max-width:900px){.calculation-form-showcase{padding:32px 20px;background:#eef4f8 url('assets/calculation-form-reference.png') center/cover}.calculation-form-showcase>img{display:none}.calculation-form{position:static;width:min(100%,620px);height:auto;margin-left:auto;padding:28px;background:#fff}.calculation-form__submit{min-height:58px}}
+    .platform-showcase{margin:0;background:#f7f8fa}.platform-showcase img{display:block;width:100%;height:auto}.cta-band__inner{width:calc(100% - 80px);max-width:none;justify-content:center}.cta-band h2{max-width:900px;font-size:34px;text-align:left}
+    .hero__content{width:max-content;max-width:100%;margin:0 auto;transform:translateY(-100px);text-align:left}.hero__content h1{width:max-content;max-width:100%;margin-left:0;margin-right:0;text-align:left}.hero__content .lead{margin:70px 0 0}.hero__content .btn-row{margin-top:70px;justify-content:flex-start}
+    @media(max-width:980px){.site-header__search,.site-header__socials{display:none}.site-header__top{justify-content:space-between}.site-nav{gap:15px}.site-nav__links{display:none}.site-nav .catalog-button{margin-left:auto}.site-footer__grid{grid-template-columns:repeat(2,1fr)}.spec-box--usp .spec-list{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){body,html{min-width:320px}.container{width:min(100% - 24px,var(--max))}.site-header__top{min-height:44px;gap:10px}.site-header__contact:first-child{display:none}.site-header__contact{font-size:14px}.site-header__callback{min-width:auto;font-size:14px}.site-nav{min-height:62px}.site-logo{width:125px}.catalog-button{font-size:0;padding:10px 12px}.catalog-button::before{font-size:20px}.nav-request{font-size:13px;padding:10px 12px}.hero{min-height:auto;padding:0}.hero__inner{min-height:auto;padding:60px 0;background:none;border-radius:0}.hero__facts{margin-top:34px}.site-footer__grid{grid-template-columns:1fr}.section{padding:55px 0}.cta-band__inner{width:calc(100% - 24px);padding:30px 24px}}
+    @media print{@page{size:A4 landscape;margin:0}.specification-showcase,.construction-schedule-showcase,.single-supplier-showcase,.workflow-showcase,.calculation-form-showcase,.cta-band,.platform-showcase,.site-footer{break-inside:avoid;page-break-inside:avoid}.hero{min-height:660px}.cta-band{padding:20px 0}.cta-band__inner{min-height:160px}.site-footer{padding-top:32px;padding-bottom:20px}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__top">
+      <div class="site-header__contact"><img src="https://metallobazav.ru/local/verstka_new/images/icons/address.svg" alt="">Санкт-Петербург</div>
+      <input class="site-header__search" aria-label="Поиск по сайту" placeholder="Поиск..." type="search">
+      <div class="site-header__socials" aria-label="Социальные сети"><a href="https://metallobazav.ru/messenger/vk/"><img src="https://metallobazav.ru/local/verstka_new/images/icons/social/header/vk.svg" alt="VK"></a><a href="https://metallobazav.ru/messenger/telegram/"><img src="https://metallobazav.ru/local/verstka_new/images/icons/social/header/telegram.svg" alt="Telegram"></a><a href="https://metallobazav.ru/messenger/whatsapp/"><img src="https://metallobazav.ru/local/verstka_new/images/icons/social/header/whatsapp.svg" alt="WhatsApp"></a></div>
+      <div class="site-header__contact"><img src="https://metallobazav.ru/local/verstka_new/images/icons/phone.svg" alt=""><a href="tel:+78122000750">+7 (812) 200-07-50</a></div>
+      <div class="site-header__contact"><img src="https://metallobazav.ru/local/verstka_new/images/icons/email.svg" alt=""><a href="mailto:info@metallobazav.ru">info@metallobazav.ru</a></div>
+      <a class="site-header__callback" href="#spec-form">Оставить заявку</a>
+    </div>
+    <nav class="container site-nav" aria-label="Основная навигация">
+      <a class="site-logo" href="https://metallobazav.ru/"><img src="https://metallobazav.ru/upload/dev2fun.imagecompress/webp/local/verstka_new/images/logo.webp" alt="Металлобаза Волхонка"></a>
+      <a class="catalog-button" href="https://metallobazav.ru/catalog/">Каталог</a>
+      <div class="site-nav__links"><a href="https://metallobazav.ru/prices/">Цены</a><a href="https://metallobazav.ru/services/">Услуги</a><a href="https://metallobazav.ru/metallokonstrukcii/">Металлоконструкции</a><a href="https://metallobazav.ru/reviews/">Отзывы</a><a href="https://metallobazav.ru/dostavka/">Доставка</a><a href="https://metallobazav.ru/contacts/">Контакты</a></div>
+      <a class="nav-request" href="#spec-form">Рассчитать поставку</a>
+    </nav>
+  </header>
+
+  <header class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+      <h1>Металл от производителя для задач любого масштаба</h1>
+
+      <p class="lead">
+        от единичных заказов до комплексного снабжения объектов и предприятий
+      </p>
+
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#spec-form">Рассчитать поставку на объект</a>
+      </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="specification-showcase" aria-label="Комплексное предложение по спецификации">
+    <img src="assets/specification-reference.png" alt="Пришлите спецификацию — соберём предложение по всей заявке">
+  </section>
+
+  <section class="construction-schedule-showcase" aria-label="Металлопрокат по графику строительства">
+    <img src="assets/construction-schedule-reference.png" alt="Металлопрокат по графику строительства">
+  </section>
+
+  <section class="single-supplier-showcase" aria-label="Программа «Единый поставщик металла»">
+    <img src="assets/single-supplier-reference.png" alt="Закройте потребность объекта у одного поставщика">
+  </section>
+
+  <section class="workflow-showcase" aria-label="От спецификации до поставки без лишних звеньев">
+    <img src="assets/workflow-reference.png" alt="От спецификации до поставки без лишних звеньев">
+  </section>
+
+  <section class="calculation-form-showcase" id="spec-form" aria-label="Расчёт крупной поставки">
+    <img src="assets/calculation-form-reference.png" alt="Расскажите об объекте — мы сразу увидим масштаб задачи">
+    <form class="calculation-form" action="#" method="post" enctype="multipart/form-data">
+      <div class="calculation-form__grid">
+        <div class="calculation-form__field">
+          <label for="calculation-name">Имя *</label>
+          <input id="calculation-name" name="name" type="text" placeholder="Имя" required>
+        </div>
+        <div class="calculation-form__field">
+          <label for="calculation-phone">Телефон *</label>
+          <input id="calculation-phone" name="phone" type="tel" placeholder="+7 _ _ ___ __ __" required>
+        </div>
+        <div class="calculation-form__field calculation-form__field--full">
+          <label for="calculation-email">E-mail</label>
+          <input id="calculation-email" name="email" type="email" placeholder="mail@company.ru">
+        </div>
+        <div class="calculation-form__field calculation-form__field--full">
+          <label for="calculation-file">Загрузить спецификацию Excel / PDF</label>
+          <label class="calculation-form__file" for="calculation-file"><input id="calculation-file" name="file" type="file" accept=".xls,.xlsx,.pdf,.csv"><span>Выберите файл</span><em>Файл не выбран</em></label>
+        </div>
+      </div>
+      <button class="calculation-form__submit" type="submit">Получить расчёт поставки&nbsp; →</button>
+      <p class="calculation-form__note">Нажимая кнопку, пользователь соглашается на обработку персональных данных.<span>Подключите форму к Битрикс24/CRM и сохраняйте источник, YCLID/ClientID и приложенную спецификацию.</span></p>
+    </form>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-band__inner">
+      <h2>Не собирайте крупную заявку у пяти поставщиков. Отправьте спецификацию — посчитаем объект комплексно.</h2>
+      <a class="btn btn--dark" href="#spec-form">Рассчитать объект →</a>
+    </div>
+  </section>
+
+  <section class="platform-showcase" aria-label="Специальные условия для наших клиентов">
+    <img src="assets/platform-reference.png" alt="Специальные условия для наших клиентов: металл в рассрочку под 0 процентов">
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div><a href="https://metallobazav.ru/"><img class="site-footer__logo" src="https://metallobazav.ru/upload/dev2fun.imagecompress/webp/local/verstka_new/images/logo.webp" alt="Металлобаза Волхонка"></a><p>Металлопрокат для строительства и промышленности в Санкт-Петербурге.</p></div>
+        <div><h3>Каталог</h3><a href="https://metallobazav.ru/catalog/chernyy-metalloprokat/">Чёрный металлопрокат</a><a href="https://metallobazav.ru/catalog/nerzhaveyushchaya-stal/">Нержавеющая сталь</a><a href="https://metallobazav.ru/catalog/tsvetnoy-metalloprokat/">Цветной металлопрокат</a></div>
+        <div><h3>Компания</h3><a href="https://metallobazav.ru/services/">Услуги</a><a href="https://metallobazav.ru/dostavka/">Доставка</a><a href="https://metallobazav.ru/company/">О компании</a><a href="https://metallobazav.ru/contacts/">Контакты</a></div>
+        <div><h3>Связаться с нами</h3><a href="tel:+78122000750">+7 (812) 200-07-50</a><a href="mailto:info@metallobazav.ru">info@metallobazav.ru</a><p>Пн–Пт: 9:00–20:00<br>Сб: 9:00–14:00</p></div>
+      </div>
+      <div class="site-footer__bottom"><span>© Металлобаза Волхонка</span><span>Крупный опт · Поставка на объект · Расчёт спецификаций</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const calculationFile = document.getElementById('calculation-file');
+    const calculationFileName = document.querySelector('.calculation-form__file em');
+    calculationFile.addEventListener('change', () => {
+      calculationFileName.textContent = calculationFile.files.length ? calculationFile.files[0].name : 'Файл не выбран';
+    });
+  </script>
+
+</body>
+</html>
